@@ -63,6 +63,12 @@ The Assignment 5.1 Arduino code is included at:
 data/sensor_code_final_v6.ino
 ```
 
+A Velxio project copy with the final sketch embedded is included at:
+
+```text
+data/arduino-temp-sensor-lab-final.vlx
+```
+
 ## Existing Engineering Tool Selected
 
 The existing tool is the Module 3.1 **Valve Lookup and Interpolation Tool**.
@@ -326,7 +332,7 @@ sensor_integration_log.csv
 │   ├── valve_lookup_table.csv
 │   ├── sensor_readings_raw.csv
 │   ├── sensor_code_final_v6.ino
-│   └── arduino-temp-sensor-lab.vlx
+│   └── arduino-temp-sensor-lab-final.vlx
 ├── src/
 │   ├── __init__.py
 │   ├── lookup_tables.py
