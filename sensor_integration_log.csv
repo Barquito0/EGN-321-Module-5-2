@@ -1,0 +1,103 @@
+sample_number,timestamp_s,raw_adc,raw_temperature_c,raw_unit,sensor_source_status,source,validation_status,accepted_celsius,valve_family,engineering_status,coefficient,lookup_method,lower_point,upper_point,reason
+1,0.0,592,18.0,C,OK,VELXIO,ACCEPTED,18.0,VX-200,CALCULATED,1.132000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+2,1.0,592,18.0,C,OK,VELXIO,ACCEPTED,18.0,VX-200,CALCULATED,1.132000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+3,2.0,592,18.0,C,OK,VELXIO,ACCEPTED,18.0,VX-200,CALCULATED,1.132000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+4,3.0,592,18.0,C,OK,VELXIO,ACCEPTED,18.0,VX-200,CALCULATED,1.132000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+5,4.1,581,19.0,C,OK,VELXIO,ACCEPTED,19.0,VX-200,CALCULATED,1.136000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+6,5.1,512,25.0,C,SUSPICIOUS_CHANGE,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,change greater than 3 C from previous valid reading
+7,6.1,512,25.0,C,OK,VELXIO,ACCEPTED,25.0,VX-200,CALCULATED,1.160000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+8,7.1,512,25.0,C,OK,VELXIO,ACCEPTED,25.0,VX-200,CALCULATED,1.160000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+9,8.1,512,25.0,C,OK,VELXIO,ACCEPTED,25.0,VX-200,CALCULATED,1.160000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+10,9.1,445,31.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+11,10.1,403,35.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+12,11.1,403,35.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+13,12.1,403,35.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+14,13.1,403,35.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+15,14.1,403,35.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+16,15.1,318,44.1,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+17,16.1,318,44.1,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+18,17.1,203,60.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+19,18.1,203,60.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+20,19.1,140,73.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+21,20.1,262,51.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+22,21.1,413,34.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+23,22.1,467,29.0,C,SUSPICIOUS_CHANGE,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,change greater than 3 C from previous valid reading
+24,23.1,592,18.0,C,SUSPICIOUS_CHANGE,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,change greater than 3 C from previous valid reading
+25,24.1,706,8.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+26,25.1,749,4.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+27,26.1,901,-14.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+28,27.1,901,-14.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+29,28.1,779,1.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+30,29.1,706,8.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+31,30.1,673,11.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+32,31.1,673,11.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+33,32.1,604,17.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+34,33.1,604,17.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+35,34.1,604,17.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+36,35.1,604,17.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+37,36.1,604,17.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+38,37.1,604,17.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+39,38.1,604,17.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+40,39.1,592,18.0,C,OK,VELXIO,ACCEPTED,18.0,VX-200,CALCULATED,1.132000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+41,40.1,592,18.0,C,OK,VELXIO,ACCEPTED,18.0,VX-200,CALCULATED,1.132000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+42,41.1,557,21.0,C,SUSPICIOUS_CHANGE,VELXIO,ACCEPTED,21.0,VX-200,CALCULATED,1.144000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+43,42.1,557,21.0,C,OK,VELXIO,ACCEPTED,21.0,VX-200,CALCULATED,1.144000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+44,43.1,557,21.0,C,OK,VELXIO,ACCEPTED,21.0,VX-200,CALCULATED,1.144000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+45,44.1,557,21.0,C,OK,VELXIO,ACCEPTED,21.0,VX-200,CALCULATED,1.144000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+46,45.1,557,21.0,C,OK,VELXIO,ACCEPTED,21.0,VX-200,CALCULATED,1.144000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+47,46.1,534,23.0,C,OK,VELXIO,ACCEPTED,23.0,VX-200,CALCULATED,1.152000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+48,47.1,424,33.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+49,48.1,424,33.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+50,49.1,523,24.0,C,SUSPICIOUS_CHANGE,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,change greater than 3 C from previous valid reading
+51,50.1,650,13.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+52,51.1,650,13.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+53,52.1,650,13.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+54,53.1,546,22.0,C,SUSPICIOUS_CHANGE,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,change greater than 3 C from previous valid reading
+55,54.1,546,22.0,C,OK,VELXIO,ACCEPTED,22.0,VX-200,CALCULATED,1.148000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+56,55.1,546,22.0,C,OK,VELXIO,ACCEPTED,22.0,VX-200,CALCULATED,1.148000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+57,56.1,546,22.0,C,OK,VELXIO,ACCEPTED,22.0,VX-200,CALCULATED,1.148000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+58,57.1,546,22.0,C,OK,VELXIO,ACCEPTED,22.0,VX-200,CALCULATED,1.148000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+59,58.1,255,52.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+60,59.1,255,52.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+61,60.1,255,52.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+62,61.1,255,52.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+63,62.1,255,52.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+64,63.1,255,52.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+65,64.1,255,52.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+66,65.1,456,30.0,C,SUSPICIOUS_CHANGE,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,change greater than 3 C from previous valid reading
+67,66.1,456,30.0,C,OK,VELXIO,ACCEPTED,30.0,VX-200,CALCULATED,1.180000,exact,"(30.0, 1.18)","(30.0, 1.18)",sensor reading passed validation and filtering
+68,67.1,604,17.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+69,68.1,604,17.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+70,69.1,604,17.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+71,70.1,604,17.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+72,71.1,557,21.0,C,SUSPICIOUS_CHANGE,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,change greater than 3 C from previous valid reading
+73,72.2,489,27.0,C,SUSPICIOUS_CHANGE,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,change greater than 3 C from previous valid reading
+74,73.2,489,27.0,C,OK,VELXIO,ACCEPTED,27.0,VX-200,CALCULATED,1.168000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+75,74.2,489,27.0,C,OK,VELXIO,ACCEPTED,27.0,VX-200,CALCULATED,1.168000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+76,75.2,673,11.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+77,76.2,592,18.0,C,SUSPICIOUS_CHANGE,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,change greater than 3 C from previous valid reading
+78,77.2,569,20.0,C,OK,VELXIO,ACCEPTED,20.0,VX-200,CALCULATED,1.140000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+79,78.2,569,20.0,C,OK,VELXIO,ACCEPTED,20.0,VX-200,CALCULATED,1.140000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+80,79.2,569,20.0,C,OK,VELXIO,ACCEPTED,20.0,VX-200,CALCULATED,1.140000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+81,80.2,569,20.0,C,OK,VELXIO,ACCEPTED,20.0,VX-200,CALCULATED,1.140000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+82,81.2,569,20.0,C,OK,VELXIO,ACCEPTED,20.0,VX-200,CALCULATED,1.140000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+83,82.2,393,36.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+84,83.2,310,45.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+85,84.2,592,18.0,C,SUSPICIOUS_CHANGE,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,change greater than 3 C from previous valid reading
+86,85.2,807,-2.0,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+87,86.2,673,11.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+88,87.2,364,39.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+89,88.2,285,48.1,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+90,89.2,639,14.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+91,90.2,807,-2.0,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+92,91.2,888,-12.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+93,92.2,935,-20.1,C,INVALID_OUT_OF_RANGE,VELXIO,REJECTED,,VX-200,NOT_RUN,,,,,outside supported 0-50 C sensor range
+94,93.2,639,14.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+95,94.2,424,33.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+96,95.2,627,15.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+97,96.2,512,25.0,C,SUSPICIOUS_CHANGE,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,change greater than 3 C from previous valid reading
+98,97.2,512,25.0,C,OK,VELXIO,ACCEPTED,25.0,VX-200,CALCULATED,1.160000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+99,98.2,512,25.0,C,OK,VELXIO,ACCEPTED,25.0,VX-200,CALCULATED,1.160000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+100,99.2,512,25.0,C,OK,VELXIO,ACCEPTED,25.0,VX-200,CALCULATED,1.160000,interpolation,"(10.0, 1.1)","(30.0, 1.18)",sensor reading passed validation and filtering
+101,100.2,684,10.0,C,SUSPICIOUS_TEMP,VELXIO,FLAGGED,,VX-200,NOT_RUN,,,,,outside expected 18-30 C normal sensor range
+102,101.2,,,C,MISSING,SIMULATED_FAILURE,REJECTED,,VX-200,NOT_RUN,,,,,temperature_c is missing
