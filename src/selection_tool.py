@@ -1,4 +1,5 @@
-"""Validated lookup and interpolation tool for valve coefficients.
+"""
+Validated lookup and interpolation tool for valve coefficients.
 
 Engineering rule:
 Interpolate inside the evidence. Refuse outside it.
@@ -9,7 +10,28 @@ from src.lookup_tables import LOOKUP_TABLES
 
 
 def select_coefficient(valve_family, temperature_c):
-    """Select or interpolate a valve coefficient."""
+    """
+    Select or interpolate a valve coefficient.
+
+    Parameters
+    ----------
+    valve_family : str
+        Supported valve family name.
+    temperature_c : int or float
+        Requested operating temperature in degrees Celsius.
+
+    Returns
+    -------
+    dict
+        Structured information describing the lookup result.
+
+    Raises
+    ------
+    ValueError
+        If the valve family is unsupported or the requested temperature is
+        outside that family's supported engineering-data range.
+    """
+
     if valve_family not in LOOKUP_TABLES:
         raise ValueError(f"Unsupported valve_family: {valve_family}")
 
