@@ -1,0 +1,108 @@
+{
+  "format": "velxio-project",
+  "version": 1,
+  "exportedAt": "2026-09-29T19:34:14.116Z",
+  "name": "arduino-temp-sensor-lab-final",
+  "boards": [
+    {
+      "id": "arduino-uno",
+      "boardKind": "arduino-uno",
+      "x": 60,
+      "y": 60,
+      "activeFileGroupId": "group-arduino-uno",
+      "languageMode": "arduino",
+      "serialBaudRate": 9600
+    }
+  ],
+  "fileGroups": {
+    "group-arduino-uno": [
+      {
+        "name": "sketch.ino",
+        "content": "// EGN 321 - Virtual Sensor Reliability Lab\n// Arduino Uno + NTC Temperature Sensor\n// VERSION 6 - FIXED SUSPICIOUS CHANGE LOGIC\n//\n// Serial output:\n// sample,time_seconds,raw_adc,temperature_c,unit,status\n\n#include <math.h>\n\nconst int SENSOR_PIN = A0;\nconst float BETA = 3950.0;\n\n// Absolute supported range\nconst float MIN_VALID_TEMP_C = 0.0;\nconst float MAX_VALID_TEMP_C = 50.0;\n\n// Expected normal operating range\nconst float MIN_NORMAL_TEMP_C = 18.0;\nconst float MAX_NORMAL_TEMP_C = 30.0;\n\n// Change greater than 3 C between consecutive\n// valid readings is considered suspicious.\nconst float MAX_ALLOWED_CHANGE_C = 3.0;\n\nunsigned long sampleNumber = 1;\n\nfloat previousTemperature = 0.0;\nbool havePreviousTemperature = false;\n\nfloat adcToCelsius(int rawValue) {\n  if (rawValue <= 0 || rawValue >= 1023) {\n    return NAN;\n  }\n\n  float temperatureC =\n    1.0 /\n    (\n      log(\n        1.0 / (1023.0 / rawValue - 1.0)\n      ) / BETA\n      + 1.0 / 298.15\n    )\n    - 273.15;\n\n  return temperatureC;\n}\n\nvoid setup() {\n  Serial.begin(9600);\n\n  Serial.println(\n    \"VERSION_6_FIXED_SUSPICIOUS_LOGIC\"\n  );\n\n  Serial.println(\n    \"sample,time_seconds,raw_adc,temperature_c,unit,status\"\n  );\n}\n\nvoid loop() {\n  int rawValue = analogRead(SENSOR_PIN);\n  float temperatureC = adcToCelsius(rawValue);\n\n  String status;\n\n  if (isnan(temperatureC)) {\n    status = \"MISSING\";\n  }\n  else if (\n    temperatureC < MIN_VALID_TEMP_C ||\n    temperatureC > MAX_VALID_TEMP_C\n  ) {\n    status = \"INVALID_OUT_OF_RANGE\";\n  }\n  else if (\n    temperatureC < MIN_NORMAL_TEMP_C ||\n    temperatureC > MAX_NORMAL_TEMP_C\n  ) {\n    status = \"SUSPICIOUS_TEMP\";\n  }\n  else if (\n    havePreviousTemperature &&\n    fabs(temperatureC - previousTemperature)\n      > MAX_ALLOWED_CHANGE_C\n  ) {\n    status = \"SUSPICIOUS_CHANGE\";\n  }\n  else {\n    status = \"OK\";\n  }\n\n  // Update comparison value for every valid in-range reading.\n  if (\n    !isnan(temperatureC) &&\n    temperatureC >= MIN_VALID_TEMP_C &&\n    temperatureC <= MAX_VALID_TEMP_C\n  ) {\n    previousTemperature = temperatureC;\n    havePreviousTemperature = true;\n  }\n\n  Serial.print(sampleNumber);\n  Serial.print(\",\");\n\n  Serial.print(millis() / 1000.0, 1);\n  Serial.print(\",\");\n\n  Serial.print(rawValue);\n  Serial.print(\",\");\n\n  if (isnan(temperatureC)) {\n    Serial.print(\"\");\n  } else {\n    Serial.print(temperatureC, 1);\n  }\n\n  Serial.print(\",C,\");\n  Serial.println(status);\n\n  sampleNumber++;\n  delay(1000);\n}\n"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "ntc_temperature_sensor_1790710258269_unh66xt3w",
+      "metadataId": "ntc-temperature-sensor",
+      "x": 52,
+      "y": 398,
+      "properties": {
+        "temperature": 72
+      }
+    }
+  ],
+  "wires": [
+    {
+      "id": "wire-1790710300117",
+      "start": {
+        "componentId": "arduino-uno",
+        "pinName": "5V",
+        "x": 220,
+        "y": 251.5
+      },
+      "end": {
+        "componentId": "ntc_temperature_sensor_1790710258269_unh66xt3w",
+        "pinName": "VCC",
+        "x": 193,
+        "y": 439.8
+      },
+      "waypoints": [
+        {
+          "x": 220,
+          "y": 439.8
+        }
+      ],
+      "color": "#cc0000",
+      "autoRouted": true
+    },
+    {
+      "id": "wire-1790710314845",
+      "start": {
+        "componentId": "arduino-uno",
+        "pinName": "GND.3",
+        "x": 239,
+        "y": 251.5
+      },
+      "end": {
+        "componentId": "ntc_temperature_sensor_1790710258269_unh66xt3w",
+        "pinName": "GND",
+        "x": 193,
+        "y": 430.2
+      },
+      "waypoints": [
+        {
+          "x": 193,
+          "y": 251.5
+        }
+      ],
+      "color": "#000000",
+      "autoRouted": true
+    },
+    {
+      "id": "wire-1790710323389",
+      "start": {
+        "componentId": "arduino-uno",
+        "pinName": "A0",
+        "x": 268,
+        "y": 251.5
+      },
+      "end": {
+        "componentId": "ntc_temperature_sensor_1790710258269_unh66xt3w",
+        "pinName": "OUT",
+        "x": 193,
+        "y": 449.5
+      },
+      "waypoints": [
+        {
+          "x": 268,
+          "y": 449.5
+        }
+      ],
+      "color": "#22c55e",
+      "autoRouted": true
+    }
+  ],
+  "activeBoardId": "arduino-uno"
+}
